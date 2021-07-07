@@ -15,12 +15,14 @@ function logEvent() {
     const data = {
         name: 'Wendy Yanto'
     }
+    console.log('logEvent')
     window.dispatchEvent(new CustomEvent(TRACKER_EVENT, {
         detail: data
     }))
 }
 
 window.addEventListener(TRACKER_EVENT, event => {
+    console.log('receiveEvent')
     alert('Receive event from ' + event.detail.name)
 })
 </script>
