@@ -6,6 +6,23 @@
     <a href="tel:0811111,1234#">
         123-456-7890
     </a>
+    <button onclick="logEvent()">Halo</button>
 </p>
+<script>
+const TRACKER_EVENT = "TRACKER_EVENT"
+
+function logEvent() {
+    const data = {
+        name: 'Wendy Yanto'
+    }
+    window.dispatchEvent(new CustomEvent(TRACKER_EVENT, {
+        detail: data
+    }))
+}
+
+window.addEventListener(TRACKER_EVENT, event => {
+    alert('Receive event from ' + event.detail.name)
+})
+</script>
 </body>
 </html>
