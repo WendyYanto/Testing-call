@@ -3,29 +3,12 @@
 </head>
 <body>
 <p>
-    <a href="tel:0811111,1234#">
-        123-456-7890
+    <a href="tel:085592005003,6276#">
+        085592005003,6276#
     </a>
-    <button onclick="logEvent()">Halo</button>
 </p>
 <script type="text/javascript">
-const TRACKER_EVENT = "TRACKER_EVENT"
-
-function logEvent() {
-    alert('Send event from ' + event.detail.name)
-    const data = {
-        name: 'Wendy Yanto'
-    }
-    console.log('logEvent')
-    window.dispatchEvent(new CustomEvent(TRACKER_EVENT, {
-        detail: data
-    }))
-}
-
-window.addEventListener(TRACKER_EVENT, event => {
-    console.log('receiveEvent')
-    alert('Receive event from ' + event.detail.name)
-})
+console.log('Loaded')
 </script>
 </body>
 </html>
